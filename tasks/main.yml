@@ -5,7 +5,7 @@
 - name: Copy the ntp.conf template file
   template: src=ntp.conf.j2 dest=/etc/ntp.conf
   notify:
-  - restart ntp
+  - restart {{ ntp_service_name }}
 
 - name: Ensure NTP is running.
   service: name={{ ntp_service_name }} state={{ ntp_service_state }} enabled={{ ntp_service_enabled }}
