@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: "Grischa Aranda"
+  license: MIT
+  min_ansible_version: 1.4
+  platforms:
+  - name: EL
+    versions:
+     - 6
+  galaxy_tags:
+    - ntp
+  categories:
+    - system
+dependencies: []
