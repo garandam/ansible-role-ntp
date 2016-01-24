@@ -1,6 +1,6 @@
 # Ansible Role: NTP
 
-Installs `NTP` on RedHat/CentOS
+Installs `NTP` on RedHat/CentOS with Ansible
 
 ## Requirements
 None.
@@ -21,7 +21,7 @@ ntp_config_server: [ '0.pool.ntp.org', '1.pool.ntp.org', '2.pool.ntp.org', '3.po
 None.
 
 ## Example Playbook
-1. Install `NTP` and set the default settings.
+Install `NTP` and set the default settings.
 ```yaml
 ---
 - hosts: all
@@ -29,7 +29,7 @@ None.
     - role: ntp
 ```
 
-2. Install `NTP` and set custom servers.
+Install `NTP` and set custom servers.
 ```yaml
 ---
 - hosts: all

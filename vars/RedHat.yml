@@ -1,2 +1,2 @@
 ---
-ntp_service_name: ntpd
+ntp_service_name: 'ntpd'
