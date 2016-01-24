@@ -4,6 +4,7 @@
 
 - name: Ensure NTP (for time synchronization) is installed.
   yum: name=ntp state={{ ntp_pkg_state }}
+  when: ansible_os_family == 'RedHat'
 
 - name: Copy the ntp.conf template file
   template: src=ntp.conf.j2 dest=/etc/ntp.conf
@@ -11,4 +12,4 @@
   - restart ntp
 
 - name: Ensure NTP is running.
-  service: name={{ ntp_service_name }} state={{ ntp_service_state }} enabled={{ ntp_service_enabled }}
+  service: name={{ ntp_service_name }} state={{ ntp_service_state }} enabled={{ ntp_service_enabled }} pattern='/ntpd'
