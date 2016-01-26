@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/garandam/ansible-role-ntp.svg?branch=master)](https://travis-ci.org/garandam/ansible-role-ntp)
 
-Installs `NTP` on RedHat/CentOS with Ansible
+Installs `NTP` on RedHat/CentOS or Debian/Ubuntu with Ansible
 
 ## Requirements
 This role requires Ansible 1.4 or higher, and platform requirements are listed in the metadata file.
