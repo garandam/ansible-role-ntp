@@ -9,7 +9,7 @@ galaxy_info:
      - 7
   - name: Ubuntu
     versions:
-     - 14.04
+     - trusty
   galaxy_tags:
     - ntp
   categories:
