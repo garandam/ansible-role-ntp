@@ -42,6 +42,11 @@ Install `NTP` and set custom servers.
 - Add `tests` to [travis](https://travis-ci.org/) (Docker & CentOS)
 - Run `serverspec` tests in [travis](https://travis-ci.org/)
 
+## THX
+[Bert Van Vreckem](https://bertvv.github.io/notes-to-self/about/)
+[Testing Ansible roles with Travis-CI, Part 1: CentOS](http://bertvv.github.io/notes-to-self/2015/12/11/testing-ansible-roles-with-travis-ci-part-1-centos/)
+[Testing Ansible roles with Travis-CI, Part 2: Multi-platform tests](http://bertvv.github.io/notes-to-self/2015/12/13/testing-ansible-roles-with-travis-ci-part-2-multi-platform-tests/)
+
 ## License
 MIT
 
