@@ -2,8 +2,13 @@
 - name: Add the OS specific variables
   include_vars: '{{ ansible_os_family }}.yml'
 
-- name: Ensure NTP (for time synchronization) is installed.
+- name: Ensure NTP (for time synchronization) is installed in RedHat derivatives
   yum: name=ntp state={{ ntp_pkg_state }}
+  when: ansible_os_family == 'RedHat'
+
+- name: Ensure NTP (for time synchronization) is installed in Debian derivatives
+  apt: name=ntp state={{ ntp_pkg_state }}
+  when: ansible_os_family == 'Debian'
 
 - name: Copy the ntp.conf template file
   template: src=ntp.conf.j2 dest=/etc/ntp.conf
