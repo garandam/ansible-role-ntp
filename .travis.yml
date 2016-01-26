@@ -5,7 +5,7 @@ env:
   global:
     - container_id: $(mktemp)
     - role: /etc/ansible/roles/role_under_test
-    - test_playbook: $(role)/test.yml
+    - test_playbook: ${role}/test.yml
     - docker_image: bertvv/ansible-testing
 
   matrix:
