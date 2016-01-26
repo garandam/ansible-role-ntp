@@ -28,7 +28,8 @@ services:
 before_install:
   - sudo apt-get update
   # Pull container
-  - 'sudo docker pull $(docker_image):${distribution}_${version}'
+  - 'sudo docker pull ${docker_image}:${distribution}_${version}'
+
   # Customize container
   #- 'sudo docker build --rm=true --file=tests/Dockerfile.${distribution}-${version} --tag=${distribution}-${version}:ansible tests'
 
@@ -36,7 +37,7 @@ script:
    # Run container in detached state
   - >
     sudo docker run --detach --volume="${PWD}:${role}:ro" ${run_opts}
-    $(docker_image):${distribution}_${version} "${init}" > "${container_id}"
+    ${docker_image}:${distribution}_${version} "${init}" > "${container_id}"
 
   # Check the role/playbook's syntax.
   - >
